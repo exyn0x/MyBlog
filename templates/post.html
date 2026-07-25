@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% if post %}
+        Post #{{ post.id }}
+        {% else %}
+        No Post...
+        {% endif %}
+    </title>
+</head>
+<body>
+    {% if post %}
+        <div>
+            <h1>{{ post.title }}</h1>
+            <h3>{{ post.content }}</h3>
+            <p>{{ post.created_at }}</p>
+        </div>
+    {% else %}
+        No Post...
+    {% endif %}
+</body>
+</html>
